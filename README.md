@@ -13,3 +13,8 @@ npm run build
 ````sh
 npm run serve
 ````
+## watch
+````sh
+watch 'npm run {build|watch}'
+````
+
