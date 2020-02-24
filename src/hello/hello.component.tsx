@@ -1,28 +1,36 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { IHello } from './hello.interface'
+import * as React from "react";
+import { Component } from "react";
+import { IHello } from "./hello.interface";
 
-export class Hello extends Component<IHello, {}> {
+const btnStyle = {
+  color: "#4CAF50",
+  padding: "16px",
+  fontSize: "20px"
+};
 
-  constructor(props: Object) {
+export class Hello extends Component<any, IHello> {
+  constructor(props:any) {
     super(props);
     this.state = { seconds: 0 };
   }
 
   change() {
-    this.setState((prev: any) => ({
-      seconds: prev.seconds + 20
-    }))
+    this.setState({
+      seconds: this.state.seconds + 20
+    });
   }
 
   render() {
-    return <div>
-      <h1>Compiler: {this.props.compiler}</h1>
-      <h2>Framework: {this.props.framework}</h2>
-    </div>
+    return (
+      <div>
+        <h1>Seconds: {this.state.seconds}</h1>
+        <button onClick={() => this.change()} style={btnStyle}>
+          Add 20s
+        </button>
+      </div>
+    );
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
-
+  componentDidMount() {}
+  componentWillUnmount() {}
 }

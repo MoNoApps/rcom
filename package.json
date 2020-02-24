@@ -4,27 +4,26 @@
   "description": "UI Components",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "serve": "http-server public",
+    "start": "http-server public",
     "build": "cp index.html public/index.html & cp style.css public/style.css & webpack"
   },
   "keywords": [
-    "ui",
-    "cents"
+    "ui"
   ],
   "author": "Daniel Martinez",
   "license": "MIT",
   "dependencies": {
-    "@types/react": "^16.0.34",
-    "@types/react-dom": "^16.0.3",
-    "http-server": "^0.11.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "webpack": "^3.10.0"
+    "http-server": "^0.12.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^3.4.1",
-    "source-map-loader": "^0.2.3",
-    "typescript": "^2.6.2"
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "awesome-typescript-loader": "^5.2.1",
+    "@types/react": "^16.9.22",
+    "@types/react-dom": "^16.9.5",
+    "source-map-loader": "^0.2.3"
   }
 }
